@@ -15,12 +15,12 @@ deploymentStrategy: {}
 
 ## Is this deployment for OpenShift? If so, we help with SCCs
 OpenShift:
-  enabled: false
-  createSCC: true
+  enabled: true
+  createSCC: false
 
 image:
   repository: sonarqube
-  tag: 8.5.1-community
+  tag: 6.7.5-community
   pullPolicy: IfNotPresent
   # If using a private repository, the name of the imagePullSecret to use
   # pullSecret: my-repo-secret
@@ -208,7 +208,7 @@ resources: {}
 #  cpu: 100m
 #  memory: 128Mi
 persistence:
-  enabled: false
+  enabled: true
   ## Set annotations on pvc
   annotations: {}
 
